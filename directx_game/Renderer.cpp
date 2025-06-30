@@ -14,6 +14,9 @@ void Renderer::BeginRenderPass()
 	const float clearColor[4] = { 0.682f, 0.847f, 1.0f, 1.0f }; // Clear to light blue
 	context->ClearRenderTargetView(backBufferRenderTargetView.Get(), clearColor);
 
+	const CD3D11_VIEWPORT viewport(0.0f, 0.0f, frameBufferWidth, frameBufferHeight);
+	context->RSSetViewports(1, &viewport);
+
 	ID3D11RenderTargetView* renderTargets[] = { backBufferRenderTargetView.Get() };
 	context->OMSetRenderTargets(1, renderTargets, nullptr); // Set the render target view
 }

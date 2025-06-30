@@ -7,8 +7,10 @@
 #include <SDL2/SDL.h>
 #pragma comment(lib, "dxgi.lib")
 #pragma comment(lib, "d3d11.lib")
+#pragma comment(lib, "d3dcompiler.lib")
 
 #include "Renderer.h"
+#include "TriangleTestPipeline.h"
 
 
 int main()
@@ -31,6 +33,7 @@ int main()
 	}
 
 	Renderer renderer(window, 800, 600);
+	TriangleTestPipeline trianglePipeline(renderer);
 
 	bool running = true;
 	SDL_Event event;
@@ -44,7 +47,7 @@ int main()
 
 		renderer.BeginRenderPass();
 
-		// Here you would typically render your game objects
+		trianglePipeline.render();
 
 		renderer.EndRenderPass();
 

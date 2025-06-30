@@ -130,8 +130,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BlobUtil.cpp" />
     <ClCompile Include="directx_game.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="TriangleTestPipeline.cpp" />
+    <ClCompile Include="ShaderUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="set_vcpkg.ps1" />
@@ -139,7 +142,10 @@
     <None Include="vcpkg.json" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BlobUtil.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="TriangleTestPipeline.h" />
+    <ClInclude Include="ShaderUtil.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

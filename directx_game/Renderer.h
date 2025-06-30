@@ -13,6 +13,10 @@ class Renderer
 public:
 	Renderer(SDL_Window* window, int frameBufferWidth, int frameBufferHeight);
 
+	ComPtr<ID3D11Device> GetDevice() const { return device; }
+
+	ComPtr<ID3D11DeviceContext> GetDeviceContext() const { return context; }
+
 	void BeginRenderPass();
 	void EndRenderPass();
 

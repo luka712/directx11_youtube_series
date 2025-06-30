@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Pipelines">
+      <UniqueIdentifier>{f9c64525-45fc-415e-9a0a-7be701364983}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pipelines">
+      <UniqueIdentifier>{c2bc09e7-fb1c-46b0-bd83-a86046a0410f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Util">
+      <UniqueIdentifier>{2e854eaf-3160-457f-b1dc-ccdb176ebef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util">
+      <UniqueIdentifier>{a1f81fa1-50ca-4207-91fe-b91e822c3d0d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx_game.cpp">
@@ -20,6 +32,15 @@
     </ClCompile>
     <ClCompile Include="Renderer.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TriangleTestPipeline.cpp">
+      <Filter>Source Files\Pipelines</Filter>
+    </ClCompile>
+    <ClCompile Include="BlobUtil.cpp">
+      <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderUtil.cpp">
+      <Filter>Source Files\Util</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +51,15 @@
   <ItemGroup>
     <ClInclude Include="Renderer.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangleTestPipeline.h">
+      <Filter>Header Files\Pipelines</Filter>
+    </ClInclude>
+    <ClInclude Include="BlobUtil.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderUtil.h">
+      <Filter>Header Files\Util</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
