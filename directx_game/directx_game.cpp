@@ -47,7 +47,8 @@ int main()
 
 		renderer.BeginRenderPass();
 
-		trianglePipeline.render();
+		// Here you would typically render your game objects
+		trianglePipeline.Render(); // Render the triangle
 
 		renderer.EndRenderPass();
 

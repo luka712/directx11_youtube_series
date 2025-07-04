@@ -1,18 +1,18 @@
 #include "ShaderUtil.h"
-#include <string>
 #include <iostream>
 
 ComPtr<ID3D11VertexShader> ShaderUtil::CreateVertexShader(ComPtr<ID3D11Device> device, ComPtr<ID3D10Blob> blob)
 {
-	ComPtr<ID3D11VertexShader> shader;
+	ComPtr< ID3D11VertexShader> shader;
 
 	HRESULT hr = device->CreateVertexShader(blob->GetBufferPointer(), blob->GetBufferSize(), nullptr, &shader);
-	if (FAILED(hr)) {
-		std::string msg = "Failed to create vertex shader.";
-		std::cerr << msg << std::endl;
+	if (FAILED(hr))
+	{
+		std::cerr << "Failed to create vertex shader" << std::endl;
+		return nullptr;
 	}
 
-    return shader;
+	return shader;
 }
 
 ComPtr<ID3D11PixelShader> ShaderUtil::CreatePixelShader(ComPtr<ID3D11Device> device, ComPtr<ID3D10Blob> blob)
@@ -20,9 +20,10 @@ ComPtr<ID3D11PixelShader> ShaderUtil::CreatePixelShader(ComPtr<ID3D11Device> dev
 	ComPtr<ID3D11PixelShader> shader;
 
 	HRESULT hr = device->CreatePixelShader(blob->GetBufferPointer(), blob->GetBufferSize(), nullptr, &shader);
-	if (FAILED(hr)) {
-		std::string msg = "Failed to create pixel shader.";
-		std::cerr << msg << std::endl;
+	if (FAILED(hr))
+	{
+		std::cerr << "Failed to create vertex shader" << std::endl;
+		return nullptr;
 	}
 
 	return shader;

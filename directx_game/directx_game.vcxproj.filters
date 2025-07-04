@@ -14,16 +14,16 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Header Files\Pipelines">
-      <UniqueIdentifier>{f9c64525-45fc-415e-9a0a-7be701364983}</UniqueIdentifier>
+      <UniqueIdentifier>{31ddbdf3-ca81-4ee5-b376-ac54f76dfbee}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Pipelines">
-      <UniqueIdentifier>{c2bc09e7-fb1c-46b0-bd83-a86046a0410f}</UniqueIdentifier>
+      <UniqueIdentifier>{c7849f3b-639d-4f65-8477-2ab49e85e669}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Util">
-      <UniqueIdentifier>{2e854eaf-3160-457f-b1dc-ccdb176ebef1}</UniqueIdentifier>
+      <UniqueIdentifier>{a3e7c7cd-a6d9-483c-b439-40e262307104}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Util">
-      <UniqueIdentifier>{a1f81fa1-50ca-4207-91fe-b91e822c3d0d}</UniqueIdentifier>
+      <UniqueIdentifier>{8b62b740-d50a-4009-a909-8631160f2550}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

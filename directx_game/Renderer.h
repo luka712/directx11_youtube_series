@@ -5,6 +5,7 @@
 #include <dxgi.h>
 #include <dxgi1_3.h>
 #include <d3d11.h>
+#include <d3dcompiler.h>
 
 using namespace Microsoft::WRL;
 
@@ -15,7 +16,7 @@ public:
 
 	ComPtr<ID3D11Device> GetDevice() const { return device; }
 
-	ComPtr<ID3D11DeviceContext> GetDeviceContext() const { return context; }
+	ComPtr<ID3D11DeviceContext> GetContext() const { return context; }
 
 	void BeginRenderPass();
 	void EndRenderPass();

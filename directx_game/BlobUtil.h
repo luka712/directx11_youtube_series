@@ -2,6 +2,7 @@
 
 #include <wrl/client.h>
 #include <d3dcompiler.h>
+#include <d3d10.h>
 #include <string>
 
 using namespace Microsoft::WRL;
