@@ -8,10 +8,14 @@
 #pragma comment(lib, "dxgi.lib")
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "d3dcompiler.lib")
+#pragma comment( lib, "dxguid.lib") 
 
 #include "Renderer.h"
 #include "TriangleTestPipeline.h"
-
+#include <DirectXMath.h>
+#include "VertexBuffer.h"
+#include "PositionColorTestPipeline.h"
+#include "PositionColorVertex.h"
 
 int main()
 {
@@ -33,7 +37,15 @@ int main()
 	}
 
 	Renderer renderer(window, 800, 600);
-	TriangleTestPipeline trianglePipeline(renderer);
+
+	std::vector<PositionColorVertex> triangleVertices = {
+		{ { 0.0f, 0.5f, 0.0f }, { 1.0f, 0.0f, 0.0f, 1.0f } }, // Top vertex
+		{ { 0.5f, -0.5f, 0.0f }, { 0.0f, 1.0f, 0.0f, 1.0f }}, // Bottom left vertex
+		{ { -0.5f, -0.5f, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f }} // Bottom right vertex
+	};
+
+	VertexBuffer<PositionColorVertex> vertexBuffer(renderer, triangleVertices, "TriangleVertices");
+	PositionColorTestPipeline positionColorPipeline(renderer);
 
 	bool running = true;
 	SDL_Event event;
@@ -48,7 +60,7 @@ int main()
 		renderer.BeginRenderPass();
 
 		// Here you would typically render your game objects
-		trianglePipeline.Render(); // Render the triangle
+		positionColorPipeline.Render(vertexBuffer);
 
 		renderer.EndRenderPass();
 

@@ -25,6 +25,15 @@
     <Filter Include="Source Files\Util">
       <UniqueIdentifier>{8b62b740-d50a-4009-a909-8631160f2550}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Buffers">
+      <UniqueIdentifier>{94f51b27-f1e6-42d0-aa87-3c4be494b10b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Buffers">
+      <UniqueIdentifier>{bc962a04-ac41-4c45-86c4-1162c6002587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vertex">
+      <UniqueIdentifier>{4ebe64bb-3884-4e1a-ae2d-3a6a334807b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx_game.cpp">
@@ -41,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="ShaderUtil.cpp">
       <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="PositionColorTestPipeline.cpp">
+      <Filter>Source Files\Pipelines</Filter>
+    </ClCompile>
+    <ClCompile Include="InputLayoutUtil.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,5 +76,24 @@
     <ClInclude Include="ShaderUtil.h">
       <Filter>Header Files\Util</Filter>
     </ClInclude>
+    <ClInclude Include="PositionColorTestPipeline.h">
+      <Filter>Header Files\Pipelines</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>Header Files\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferUtil.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="PositionColorVertex.h">
+      <Filter>Header Files\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLayoutUtil.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="position_color_vs.hlsl" />
+    <FxCompile Include="position_color_ps.hlsl" />
   </ItemGroup>
 </Project>
