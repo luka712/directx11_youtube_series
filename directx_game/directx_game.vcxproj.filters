@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Util">
       <UniqueIdentifier>{8b62b740-d50a-4009-a909-8631160f2550}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Buffers">
+      <UniqueIdentifier>{c64ba5f9-0966-4826-bcb7-aabf03b1f916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vertices">
+      <UniqueIdentifier>{f3481e17-45ed-433b-820c-f7a04ed12a97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx_game.cpp">
@@ -41,6 +47,12 @@
     </ClCompile>
     <ClCompile Include="ShaderUtil.cpp">
       <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BufferUtil.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +71,15 @@
       <Filter>Header Files\Util</Filter>
     </ClInclude>
     <ClInclude Include="ShaderUtil.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>Header Files\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="PositionColorVertex.h">
+      <Filter>Header Files\Vertices</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferUtil.h">
       <Filter>Header Files\Util</Filter>
     </ClInclude>
   </ItemGroup>

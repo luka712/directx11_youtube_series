@@ -131,10 +131,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BlobUtil.cpp" />
+    <ClCompile Include="BufferUtil.cpp" />
     <ClCompile Include="directx_game.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ShaderUtil.cpp" />
     <ClCompile Include="TriangleTestPipeline.cpp" />
+    <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="set_vcpkg.ps1" />
@@ -143,9 +145,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlobUtil.h" />
+    <ClInclude Include="BufferUtil.h" />
+    <ClInclude Include="PositionColorVertex.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ShaderUtil.h" />
     <ClInclude Include="TriangleTestPipeline.h" />
+    <ClInclude Include="VertexBuffer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
