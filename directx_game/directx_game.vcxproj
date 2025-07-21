@@ -131,12 +131,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BlobUtil.cpp" />
-    <ClCompile Include="BufferUtil.cpp" />
     <ClCompile Include="directx_game.cpp" />
+    <ClCompile Include="InputLayoutUtil.cpp" />
+    <ClCompile Include="PositionColorPipeline.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ShaderUtil.cpp" />
     <ClCompile Include="TriangleTestPipeline.cpp" />
-    <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="set_vcpkg.ps1" />
@@ -146,11 +146,27 @@
   <ItemGroup>
     <ClInclude Include="BlobUtil.h" />
     <ClInclude Include="BufferUtil.h" />
+    <ClInclude Include="InputLayoutUtil.h" />
+    <ClInclude Include="PositionColorPipeline.h" />
     <ClInclude Include="PositionColorVertex.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ShaderUtil.h" />
     <ClInclude Include="TriangleTestPipeline.h" />
     <ClInclude Include="VertexBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="position_color_ps.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="position_color_vs.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

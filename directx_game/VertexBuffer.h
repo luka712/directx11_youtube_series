@@ -10,8 +10,8 @@ template <typename T>
 class VertexBuffer
 {
 public:
-	VertexBuffer(const Renderer& renderer, const std::vector<T> data, const std::string& debugName)
-		: renderer(renderer), buffer(nullptr)
+	VertexBuffer(const Renderer& renderer, const std::vector<T> data, unsigned int vertexCount, const std::string& debugName)
+		: renderer(renderer), buffer(nullptr), vertexCount(vertexCount)
 	{
 		buffer = BufferUtil::CreateVertexBuffer<T>(
 			renderer.GetDevice(),
@@ -19,8 +19,20 @@ public:
 			debugName
 		);
 	}
+
+	ComPtr<ID3D11Buffer> GetBuffer() const
+	{
+		return buffer;
+	}
+
+	unsigned int GetVertexCount() const
+	{
+		return vertexCount;
+	}
+
 private:
 	const Renderer& renderer;
+	const unsigned int vertexCount;
 
 	ComPtr<ID3D11Device> device;
 	ComPtr<ID3D11Buffer> buffer;
