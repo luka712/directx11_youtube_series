@@ -48,10 +48,13 @@
     <ClCompile Include="ShaderUtil.cpp">
       <Filter>Source Files\Util</Filter>
     </ClCompile>
-    <ClCompile Include="VertexBuffer.cpp">
+    <ClCompile Include="PositionColorPipeline.cpp">
+      <Filter>Source Files\Pipelines</Filter>
+    </ClCompile>
+    <ClCompile Include="PipelineLayoutUtil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BufferUtil.cpp">
+    <ClCompile Include="InputLayoutUtil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -82,5 +85,15 @@
     <ClInclude Include="BufferUtil.h">
       <Filter>Header Files\Util</Filter>
     </ClInclude>
+    <ClInclude Include="PositionColorPipeline.h">
+      <Filter>Header Files\Pipelines</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLayoutUtil.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="position_color_ps.hlsl" />
+    <FxCompile Include="position_color_vs.hlsl" />
   </ItemGroup>
 </Project>

@@ -15,6 +15,7 @@
 #include "VertexBuffer.h"
 #include "DirectXMath.h"
 #include "PositionColorVertex.h"
+#include "PositionColorPipeline.h"
 
 
 int main()
@@ -38,15 +39,24 @@ int main()
 
 	Renderer renderer(window, 800, 600);
 	TriangleTestPipeline trianglePipeline(renderer);
+	PositionColorPipeline positionColorPipeline(renderer);
 
 	std::vector<PositionColorVertex> vertices = {
-		{ { 0.0f, 0.5f, 0.0f },   { 1.0f, 0.0f, 0.0f, 1.0f } },  // Top vertex
+
+		// Triangle 1
+		{ { -0.5f, 0.5f, 0.0f },   { 1.0f, 0.0f, 0.0f, 1.0f } },  // Top left vertex
 		{ { 0.5f, -0.5f, 0.0f },  { 0.0f, 1.0f, 0.0f, 1.0f } }, // Bottom right vertex
-		{ { -0.5f, -0.5f, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f } } // Bottom left vertex
+		{ { -0.5f, -0.5f, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f } }, // Bottom left vertex
+
+		// Triangle 2
+		{ { 0.5f, 0.5f, 0.0f },   { 1.0f, 0.0f, 0.0f, 1.0f } },  // Top right vertex
+		{ { 0.5f, -0.5f, 0.0f },  { 0.0f, 1.0f, 0.0f, 1.0f } }, // Bottom right vertex
+		{ { -0.5f, 0.5f, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f } } // Top left vertex
 	};
 	VertexBuffer<PositionColorVertex> vertexBuffer(
 		renderer,
 		vertices,
+		vertices.size(),
 		"TriangleVertices");
 
 
@@ -62,8 +72,8 @@ int main()
 
 		renderer.BeginRenderPass();
 
-		// Here you would typically render your game objects
-		trianglePipeline.Render(); // Render the triangle
+		// trianglePipeline.Render(); // Render the triangle
+		positionColorPipeline.Render(vertexBuffer); // Render the colored triangle
 
 		renderer.EndRenderPass();
 
