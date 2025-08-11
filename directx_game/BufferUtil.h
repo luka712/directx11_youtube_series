@@ -44,5 +44,12 @@ public:
 
 		return buffer;
 	}
+
+
+	static ComPtr<ID3D11Buffer> CreateIndexBuffer(
+		ComPtr<ID3D11Device> device,
+		const std::vector<unsigned int> data,
+		const std::string& debugName);
+
 };
 

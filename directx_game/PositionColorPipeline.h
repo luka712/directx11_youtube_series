@@ -2,6 +2,7 @@
 
 #include "Renderer.h"
 #include "VertexBuffer.h"
+#include "IndexBuffer.h"
 #include "PositionColorVertex.h"
 
 class PositionColorPipeline
@@ -10,6 +11,7 @@ public:
 	PositionColorPipeline(Renderer& renderer);
 
 	void Render(const VertexBuffer<PositionColorVertex> &vertexBuffer);
+	void Render(const VertexBuffer<PositionColorVertex>& vertexBuffer, const IndexBuffer& indexBuffer);
 
 private:
 	Renderer& renderer;

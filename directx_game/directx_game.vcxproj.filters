@@ -31,6 +31,9 @@
     <Filter Include="Header Files\Vertices">
       <UniqueIdentifier>{f3481e17-45ed-433b-820c-f7a04ed12a97}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Buffers">
+      <UniqueIdentifier>{ff2c3d25-0b05-4e10-ac23-cc21c672c016}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directx_game.cpp">
@@ -56,6 +59,12 @@
     </ClCompile>
     <ClCompile Include="InputLayoutUtil.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>Source Files\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="BufferUtil.cpp">
+      <Filter>Source Files\Util</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +99,9 @@
     </ClInclude>
     <ClInclude Include="InputLayoutUtil.h">
       <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>Header Files\Buffers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

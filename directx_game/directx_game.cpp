@@ -41,17 +41,19 @@ int main()
 	TriangleTestPipeline trianglePipeline(renderer);
 	PositionColorPipeline positionColorPipeline(renderer);
 
+	std::vector<unsigned int> indices = {
+		0, 1, 2, // First triangle
+		3, 1, 0, // Second triangle
+	};
+	IndexBuffer indexBuffer(renderer, indices, "TriangleIndices");
+
 	std::vector<PositionColorVertex> vertices = {
 
 		// Triangle 1
 		{ { -0.5f, 0.5f, 0.0f },   { 1.0f, 0.0f, 0.0f, 1.0f } },  // Top left vertex
 		{ { 0.5f, -0.5f, 0.0f },  { 0.0f, 1.0f, 0.0f, 1.0f } }, // Bottom right vertex
 		{ { -0.5f, -0.5f, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f } }, // Bottom left vertex
-
-		// Triangle 2
 		{ { 0.5f, 0.5f, 0.0f },   { 1.0f, 0.0f, 0.0f, 1.0f } },  // Top right vertex
-		{ { 0.5f, -0.5f, 0.0f },  { 0.0f, 1.0f, 0.0f, 1.0f } }, // Bottom right vertex
-		{ { -0.5f, 0.5f, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f } } // Top left vertex
 	};
 	VertexBuffer<PositionColorVertex> vertexBuffer(
 		renderer,
@@ -73,7 +75,7 @@ int main()
 		renderer.BeginRenderPass();
 
 		// trianglePipeline.Render(); // Render the triangle
-		positionColorPipeline.Render(vertexBuffer); // Render the colored triangle
+		positionColorPipeline.Render(vertexBuffer, indexBuffer); // Render the colored triangle
 
 		renderer.EndRenderPass();
 

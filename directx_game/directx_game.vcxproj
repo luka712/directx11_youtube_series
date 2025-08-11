@@ -131,7 +131,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BlobUtil.cpp" />
+    <ClCompile Include="BufferUtil.cpp" />
     <ClCompile Include="directx_game.cpp" />
+    <ClCompile Include="IndexBuffer.cpp" />
     <ClCompile Include="InputLayoutUtil.cpp" />
     <ClCompile Include="PipelineLayoutUtil.cpp" />
     <ClCompile Include="PositionColorPipeline.cpp" />
@@ -147,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="BlobUtil.h" />
     <ClInclude Include="BufferUtil.h" />
+    <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="InputLayoutUtil.h" />
     <ClInclude Include="PositionColorPipeline.h" />
     <ClInclude Include="PositionColorVertex.h" />
